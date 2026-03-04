@@ -212,9 +212,9 @@ for sig_key, info in SIG.items():
 max_p = df["Close"].max()
 min_p = df["Close"].min()
 fig.add_hline(y=max_p, line_dash="dash", line_color="#FF2D5544", row=1, col=1,
-              annotation_text=f"高値 ${max_p:.2f}", annotation_font_color="#FF2D55", annotation_font_size=10)
+              annotation=dict(text=f"高値 ${max_p:.2f}", font=dict(color="#FF2D55", size=10)))
 fig.add_hline(y=min_p, line_dash="dash", line_color="#00E5A044", row=1, col=1,
-              annotation_text=f"安値 ${min_p:.2f}", annotation_font_color="#00E5A0", annotation_font_size=10)
+              annotation=dict(text=f"安値 ${min_p:.2f}", font=dict(color="#00E5A0", size=10)))
 
 # RSI
 fig.add_trace(go.Scatter(
